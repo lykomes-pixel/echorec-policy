@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoRec Gizlilik Politikası</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    :root {
+      --paper: #f6f5f1;
+      --paper-raised: #ffffff;
+      --ink: #16211c;
+      --ink-soft: #4b564f;
+      --ink-faint: #7c8880;
+      --line: #dcdccf;
+      --accent: #b5432f;
+      --accent-soft: #f1e2dc;
+      --ok: #2f6b4f;
+      --ok-soft: #e3ede6;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --paper: #14181a;
+        --paper-raised: #1c2224;
+        --ink: #ecefe9;
+        --ink-soft: #b7c0b8;
+        --ink-faint: #838f87;
+        --line: #303836;
+        --accent: #e08063;
+        --accent-soft: #2c211d;
+        --ok: #7fbf9c;
+        --ok-soft: #1c2b23;
+        color-scheme: dark;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 20px 96px;
+    }
+    .kicker {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 12.5px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    h1 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(30px, 6vw, 42px);
+      line-height: 1.12;
+      margin: 0 0 8px;
+      text-wrap: balance;
+      letter-spacing: -0.01em;
+    }
+    .sub {
+      color: var(--ink-soft);
+      font-size: 15.5px;
+      margin: 0 0 40px;
+      max-width: 60ch;
+    }
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--ink-faint);
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      padding: 5px 12px;
+      margin-bottom: 40px;
+    }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ok); flex: none; }
+    .headline-card {
+      background: var(--ok-soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin: 0 0 48px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .headline-card svg { flex: none; margin-top: 2px; color: var(--ok); }
+    .headline-card p { margin: 0; font-size: 15.5px; color: var(--ink); }
+    .headline-card strong { font-weight: 600; }
+    section { margin: 0 0 44px; }
+    section:last-of-type { margin-bottom: 0; }
+    h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 21px;
+      font-weight: 600;
+      margin: 0 0 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+    section:first-of-type h2 { border-top: none; padding-top: 0; }
+    p { margin: 0 0 14px; color: var(--ink); font-size: 15.5px; }
+    p.muted { color: var(--ink-soft); }
+    ul { margin: 0 0 14px; padding-left: 20px; }
+    li { margin-bottom: 8px; font-size: 15.5px; color: var(--ink); }
+    li::marker { color: var(--accent); }
+    strong { font-weight: 600; }
+    code {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      background: var(--accent-soft);
+      padding: 1px 6px;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 14px;
+      font-size: 14.5px;
+    }
+    caption { display: none; }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      font-weight: 600;
+      color: var(--ink-soft);
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    td:first-child, th:first-child { padding-left: 0; }
+    .contact {
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .contact h2 { border: none; padding: 0; margin-bottom: 6px; }
+    .contact p { margin-bottom: 16px; }
+    .copybtn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 100px;
+      padding: 10px 18px;
+      font-size: 14.5px;
+      font-family: inherit;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 64px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--ink-faint);
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">EchoRec · Yasal</p>
+  <h1>Gizlilik Politikası</h1>
+  <p class="sub">EchoRec, konuşmalarınızı kaydeden, cihaz üzerinde yazıya döken ve aratılabilir hale getiren kişisel bir uygulamadır. Bu sayfa, uygulamanın hangi verilere eriştiğini ve bu verilere ne olduğunu açıklar.</p>
+  <div class="updated"><span class="dot"></span> Son güncelleme: 25 Eylül 2026</div>
+
+  <div class="headline-card">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2.5 7v6c0 5 4 8.5 9.5 9.5 5.5-1 9.5-4.5 9.5-9.5V7L12 2Z"/><path d="m9 12 2 2 4-4"/></svg>
+    <p><strong>Kısaca:</strong> Ses kaydınız cihazınızdan hiç çıkmaz. EchoRec'in sunucusu yoktur; hiçbir kayıt, yazıya döküm ya da konum bilgisi geliştiriciye, Apple'a ya da başka bir üçüncü tarafa gönderilmez. Reklam, analitik ya da izleyici bulunmaz.</p>
+  </div>
+
+  <section>
+    <h2>Uygulama ne yapar</h2>
+    <p>EchoRec, dokunduğunuzda mikrofonla ses kaydeder, kaydı cihaz üzerindeki Apple konuşma tanıma motorlarıyla Türkçe metne çevirir ve bu metinde arama yapmanızı, kayıttan klip kesip paylaşmanızı sağlar. Uygulamanın kendine ait bir sunucusu, hesap sistemi ya da bulut veritabanı yoktur.</p>
+  </section>
+
+  <section>
+    <h2>Erişim istediğimiz izinler</h2>
+    <table>
+      <caption>İzinler ve kullanım amaçları</caption>
+      <tr><th>İzin</th><th>Ne için</th></tr>
+      <tr><td>Mikrofon</td><td>Konuşmaları kaydetmek için. İzin verilmezse kayıt yapılamaz.</td></tr>
+      <tr><td>Konuşma Tanıma</td><td>Kaydı cihaz üzerinde yazıya çevirmek için. iOS'a bu izin verildiğinde bile ses dosyası cihazdan çıkmaz: EchoRec her tanıma motorunu açıkça yalnız cihaz üzerinde çalışacak şekilde ister.</td></tr>
+      <tr><td>Konum (isteğe bağlı)</td><td>Kaydın yapıldığı yeri arşivde etiketlemek için. Kapatabilir ya da hiç izin vermeyebilirsiniz; uygulama yine çalışır.</td></tr>
+      <tr><td>Bildirimler</td><td>Bir kayıt beklenmedik biçimde durursa sizi uyarmak için.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Ne topluyoruz, ne saklıyoruz</h2>
+    <p>Kısa cevap: hiçbir şey <em>toplamıyoruz</em>. Ses kayıtları, yazıya dökümler, kestiğiniz klipler ve konum etiketleri yalnızca iPhone'unuzun kendi deposunda tutulur. EchoRec bu verileri okuyabildiğimiz, görebildiğimiz ya da erişebildiğimiz bir sunucuya hiçbir zaman göndermez — çünkü böyle bir sunucu yoktur.</p>
+    <ul>
+      <li><strong>Ses ve metin:</strong> Uygulamanın kendi veri klasöründe kalır; iPhone'unuzun cihaz koruması ile şifrelenir.</li>
+      <li><strong>iCloud yedeği:</strong> Telefonunuzun genel iCloud yedeklemesi açıksa bu veriler de yedeğe dahil olabilir — bu, sizin iCloud hesabınızın kendi şifrelemesidir, EchoRec'in değil.</li>
+      <li><strong>Analitik / reklam / çökme raporu:</strong> Hiçbiri yok. Üçüncü taraf bir SDK, reklam ağı ya da izleyici kütüphanesi kullanılmaz.</li>
+      <li><strong>Hesap:</strong> Uygulamada hesap oluşturma, giriş yapma ya da kimlik doğrulama yoktur.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Verilerinizin kontrolü sizde</h2>
+    <p>Bir kaydı sildiğinizde hem sesi hem yazıya dökümü kalıcı olarak silinir. Ayarlar'dan sesin belirli bir süre sonra otomatik silinmesini isteyebilir, ya da uygulamayı telefonunuzdan tamamen kaldırarak bütün verileri tek seferde silebilirsiniz — sunucuda hiçbir kopya kalmayacağı için bu işlem geri döndürülemez ama eksiksizdir.</p>
+  </section>
+
+  <section>
+    <h2>Başkalarının sesini kaydetmek</h2>
+    <p class="muted">EchoRec sizin hangi konuşmayı, kiminle ve nasıl kaydettiğinizi bilemez ve denetleyemez; bu sorumluluk tamamen kullanıcıya aittir. Türkiye'de Türk Ceza Kanunu madde 133 uyarınca, katılmadığınız bir konuşmayı dinlemek ya da kaydetmek, ya da katıldığınız bir konuşmayı diğer tarafların bilgisi olmadan kaydedip paylaşmak suç teşkil edebilir. Uygulama, yeni bir kayıt başladığında karşı tarafı bilgilendiren isteğe bağlı bir sesli uyarı sunar; bu özelliği açık tutmanızı öneririz.</p>
+  </section>
+
+  <section>
+    <h2>Çocukların gizliliği</h2>
+    <p>EchoRec çocuklara yönelik tasarlanmamıştır ve bilerek çocuklardan veri toplamaz — zaten hiçbir kullanıcıdan veri toplamadığı için bu, herkes için aynı şekilde geçerlidir.</p>
+  </section>
+
+  <section>
+    <h2>Bu politika değişirse</h2>
+    <p>Uygulama önemli ölçüde değişirse bu sayfa güncellenir ve yukarıdaki tarih damgası yenilenir. Önemli bir değişiklik olursa uygulama içinde de belirtilir.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Sorularınız için</h2>
+    <p>Gizlilikle ilgili bir sorunuz varsa aşağıdaki adresten ulaşabilirsiniz:</p>
+    <p><strong>E-posta:</strong> <a href="mailto:mutluwai@gmail.com">mutluwai@gmail.com</a></p>
+  </section>
+
+  <footer>EchoRec · Kişisel kullanım için geliştirilmiştir · Geliştirici: Mutlu Sulak</footer>
+</div>
+</body>
+</html>
