@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoRec Destek ve Yardım</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    :root {
+      --paper: #f6f5f1;
+      --paper-raised: #ffffff;
+      --ink: #16211c;
+      --ink-soft: #4b564f;
+      --ink-faint: #7c8880;
+      --line: #dcdccf;
+      --accent: #b5432f;
+      --accent-soft: #f1e2dc;
+      --ok: #2f6b4f;
+      --ok-soft: #e3ede6;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --paper: #14181a;
+        --paper-raised: #1c2224;
+        --ink: #ecefe9;
+        --ink-soft: #b7c0b8;
+        --ink-faint: #838f87;
+        --line: #303836;
+        --accent: #e08063;
+        --accent-soft: #2c211d;
+        --ok: #7fbf9c;
+        --ok-soft: #1c2b23;
+        color-scheme: dark;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 96px; }
+    .kicker {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 12.5px; letter-spacing: 0.09em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 14px;
+    }
+    h1 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(30px, 6vw, 42px); line-height: 1.12; margin: 0 0 8px;
+      text-wrap: balance; letter-spacing: -0.01em;
+    }
+    .sub { color: var(--ink-soft); font-size: 15.5px; margin: 0 0 48px; max-width: 60ch; }
+    .contact-card {
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px;
+      margin: 0 0 48px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .contact-card .label { font-size: 13px; color: var(--ink-faint); margin: 0 0 4px; }
+    .contact-card .email { font-size: 18px; font-weight: 600; margin: 0; }
+    h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 22px; font-weight: 600; margin: 0 0 20px;
+    }
+    .faq { margin: 0 0 52px; }
+    details {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0;
+    }
+    details:first-of-type { border-top: 1px solid var(--line); }
+    summary {
+      font-size: 16px; font-weight: 500; cursor: pointer;
+      list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    details p { margin: 12px 0 0; color: var(--ink-soft); font-size: 15px; max-width: 62ch; }
+    details p + p { margin-top: 8px; }
+    .steps { list-style: none; margin: 0 0 52px; padding: 0; counter-reset: step; }
+    .steps li {
+      counter-increment: step;
+      display: flex; gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before {
+      content: counter(step);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px; font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-soft);
+      width: 26px; height: 26px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex: none;
+    }
+    .steps p { margin: 0; font-size: 15px; color: var(--ink); padding-top: 3px; }
+    .steps b { display: block; margin-bottom: 2px; }
+    footer { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-faint); }
+    footer a { color: var(--ink-faint); }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">EchoRec · Destek</p>
+  <h1>Yardım ve destek</h1>
+  <p class="sub">EchoRec ile ilgili bir sorun mu yaşıyorsunuz, yoksa nasıl çalıştığını mı merak ediyorsunuz? Aşağıda sık sorulanları ve doğrudan yazma yolunu bulabilirsiniz.</p>
+
+  <div class="contact-card">
+    <div>
+      <p class="label">Doğrudan yazın</p>
+      <p class="email"><a href="mailto:mutluwai@gmail.com" style="color:inherit; text-decoration:none;">mutluwai@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <h2>Sık sorulanlar</h2>
+
+    <details open>
+      <summary>EchoRec kayıtlarımı bir yere gönderiyor mu?</summary>
+      <p>Hayır. Ses, yazıya döküm ve konum bilgisi yalnızca telefonunuzda kalır. Yazıya çevirme cihaz üzerindeki Apple motorlarıyla yapılır; ses dosyası hiçbir zaman internete çıkmaz. Ayrıntılar için Gizlilik Politikası sayfasına bakabilirsiniz.</p>
+    </details>
+
+    <details>
+      <summary>Kayıt kilit ekranında ya da başka bir uygulamadayken sürüyor mu?</summary>
+      <p>Evet, kayıt arka planda ve telefon kilitliyken de devam eder. Bir telefon araması ya da sistem kesintisi yaşanırsa kayıt otomatik olarak kaldığı yerden devam eder; devam edemezse bir bildirimle uyarılırsınız.</p>
+    </details>
+
+    <details>
+      <summary>Yazıya döküm neden bir süre "hazırlanıyor" görünüyor?</summary>
+      <p>Deşifre işlemi kayıt bittikten sonra, cihazın kendi işlemcisinde sırayla yapılır; uzun kayıtlarda birkaç dakika sürebilir. Ayarlar'dan "yalnız şarjdayken metne çevir" açıksa bu işlem yalnızca telefon şarja takılıyken çalışır.</p>
+    </details>
+
+    <details>
+      <summary>Arama neden yazdığım kelimeyi bulamıyor?</summary>
+      <p>Arama, konuşmanın metne çevrilmiş olmasını gerektirir; kayıt henüz deşifre edilmediyse aranamaz. Ayrıca çok kısa (2 harften az) kelimeler tam eşleşme ister; daha uzun kelimeler ekli hâlleri ve yakın yazımları da bulur.</p>
+    </details>
+
+    <details>
+      <summary>Depolama alanım doluyor, ne yapmalıyım?</summary>
+      <p>Ayarlar &gt; Depolama bölümünden bir saklama süresi seçebilirsiniz: seçtiğiniz süreden eski, yıldızlanmamış kayıtların sesi otomatik silinir, yazıya dökümü ve arama kaydı kalır. Eski kayıtlar zaten arka planda sıkıştırılmış biçime çevrilerek yer kazandırır.</p>
+    </details>
+
+    <details>
+      <summary>Verilerimi nasıl tamamen silerim?</summary>
+      <p>Uygulamayı telefonunuzdan kaldırmanız yeterlidir; EchoRec'in ayrı bir sunucusu olmadığı için silinen veriler hiçbir yerde kopya olarak kalmaz. Tek tek kayıt silmek isterseniz Arşiv'de bir kaydı sola kaydırıp "Sil" diyebilirsiniz.</p>
+    </details>
+
+    <details>
+      <summary>Başka birini kaydetmem yasal mı?</summary>
+      <p>Bu, hukuki tavsiye değildir. Türkiye'de Türk Ceza Kanunu madde 133, katılmadığınız bir konuşmayı kaydetmeyi ya da katıldığınız bir konuşmayı diğer tarafların bilgisi olmadan kaydedip paylaşmayı suç sayar. EchoRec, yeni bir kayıt başladığında karşı tarafı bilgilendiren isteğe bağlı bir sesli uyarı sunar (Ayarlar &gt; Rıza ve yasal uyarı); bunu açık tutmanızı öneririz.</p>
+    </details>
+  </div>
+
+  <h2>Hızlı başlangıç</h2>
+  <ul class="steps">
+    <li><p><b>Mikrofon ve konuşma tanıma iznini verin</b>İlk açılışta EchoRec bu izinleri ister; kayıt ve yazıya çevirme için ikisi de gereklidir.</p></li>
+    <li><p><b>Kayıt sekmesinde kırmızı düğmeye dokunun</b>Kayıt hemen başlar; duraklatabilir, önemli bir anı bayrakla işaretleyebilir ya da bitirebilirsiniz.</p></li>
+    <li><p><b>Arşiv'den geçmiş konuşmalarınızı görün</b>Her gün takvimde işaretlenir; bir konuşmaya dokunarak dinleyebilir ve metnini okuyabilirsiniz.</p></li>
+    <li><p><b>Ara sekmesinden geçen bir konuyu bulun</b>Yazdığınız kelime hangi konuşmada, hangi saniyede geçtiyse oradan dinlemeye başlar.</p></li>
+    <li><p><b>Bir bölümü klip olarak kesip paylaşın</b>Oynatıcıda makas simgesiyle bir aralık seçin, önizleyin ve doğrudan mesajla gönderin.</p></li>
+  </ul>
+
+  <footer>EchoRec · <a href="privacy.html">Gizlilik Politikası</a> · Geliştirici: Mutlu Sulak</footer>
+</div>
+</body>
+</html>
